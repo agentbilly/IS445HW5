@@ -1,0 +1,48 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Cox, Chase Homework 5</title>
+    <link rel="stylesheet" type="text/css" media="screen" href="StyleSheet.css" />
+</head>
+<body> 
+    <script>
+        try {
+            var UserValue = prompt("Please enter value between 5 and 20.", "");
+            if (UserValue < 5) throw "Low";
+            if (UserValue > 20) throw "High";
+        }
+        catch(err)
+        {
+            alert("Please Refresh Page with a value between 5-20.");
+            UserValue = 0;
+        }
+    </script>
+    <script>
+        document.writeln("<table>");
+        for (var i = 0; i <= UserValue; i++) {
+            document.writeln("<tr>");
+            if (i == 0) {
+                document.writeln("<th></th>");
+            }
+            else {
+                document.writeln("<th>" + i + "</th>");
+            }
+            for (var n = 1; n <= UserValue; n++) {
+                var z = i * n;
+                if (i==0)
+                {
+                    document.writeln("<th>" + n + "</th>");
+                }
+                else if (i == n)
+                {
+                    document.writeln("<td bgcolor= yellow style= \"font-weight: bold\">" + z + "</td>");
+                }
+                else {
+                    document.writeln("<td>" + z + "</td>");
+                }
+            }
+            document.writeln("</tr>");
+        }
+    </script>
+</body>
+</html>
